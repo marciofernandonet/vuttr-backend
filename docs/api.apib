@@ -1,0 +1,81 @@
+FORMAT: 1A
+HOST: http://localhost:3000
+
+# API VUTTR
+
+API para a aplicação VUTTR (Very Useful Tools to Remember).
+
+# Group VUTTR
+
+## Cadastrando e listando ferramenta [/tools]
+
+### Cadastrar uma nova ferramenta [POST]
+
++ Request 
+
+    + Headers
+    
+        Accept: application/json
+        Content-Type: application/json
+
+    + Attributes (Ferramenta)
+
++ Response 200 (application/json)
+
+    + Attributes (Created)
+
+### Listar todas as ferramentas cadastradas [GET]
+
++ Response 200 (application/json)
+
+    + Attributes (array[Ferramenta])
+
++ Response 400 (application/json)
+
+    + Attributes (Erro)
+
+## Filtrando ferramenta por tag [/tools$tag={tag}]
+
++ Parameters
+    
+    + tag: node (string, required) - Tag para a busca
+
+### Filtrar ferramenta [GET]
+
++ Response 200 (application/json)
+
+    + Attributes (Ferramenta)
+
++ Response 400 (application/json)
+
+    + Attributes (Erro)
+
+## Excluindo ferramenta [/tools/{id}]
+
++ Parameters
+    
+    + id: 507f1f77bcf86cd799439011 (string, required) - ID para excluir
+
+### Excluir ferramenta [DELETE]
+
++ Response 200
+    
+    {} 
+
++ Response 400 (application/json)
+
+    + Attributes (Erro)
+
+# Data Structures
+
+## Ferramenta (object)
++ title: hotel (string)
++ link: https://github.com/typicode/hotel (string)
++ description: Local app manager... (string)
++ tags: node, organizing, webapps (array[string])
+
+## Created (Ferramenta)
++ Id: 507f1f77bcf86cd799439011 (string) - Um ID gerado no formato hexadecimal
+
+## Erro (object)
++ Erro: descrição do erro (string)
