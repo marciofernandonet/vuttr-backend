@@ -12,11 +12,11 @@ API para a aplicação VUTTR (Very Useful Tools to Remember). Um simples reposit
 1. O banco de dados para a aplicação é o [MongoDB](https://www.mongodb.com/), para inicializá-lo é preciso executar o comando `mongod` em um terminal separado.
 2. Em outro terminal execute o seguinte comando `mongo` para usar o MongoDB.
 3. Para criar um banco de dados basta utilizar o comando `use vuttr_db`, na aplicação o nome do banco é _vuttr_db_.
-4. No MongoDB você não precisa criar a _coleção_, pois o mesmo cria a coleção automaticamente quando você insere algum _documento_, basta apenas executar o seguinte comando `db.vuttr.insert({"title": "Notion", "link": "https://notion.so","description": "All in one tool to organize teams and ideas.","tags":["organization", "planning","collaboration"]})`
+4. No MongoDB você não precisa criar a _coleção_, pois o mesmo cria a coleção automaticamente quando você insere algum _documento_, basta apenas executar o seguinte comando `db.vuttr.insert({"title": "json-server", "link": "https://github.com/typicode/json-server","description": "Fake REST API...","tags":["api", "json","schema"]})`
 
 ## Rodando a API
 
-Na pasta do projeto digite o seguinte comando para iniciar o servidor `npm start`, duas mensgens são exibidas _"Servidor rodando na porta: 3000"_ e _"Banco de dados conectado!"_. O arquivo de configução para o banco de dados é o _database.js_ e está na raiz do projeto, se precisar realizar alguma alteração, como exemplo a porta de conexão com o banco basta apenas editá-lo, mas por padrão a porta do MongoDB é a _27017_. 
+Na pasta do projeto digite o seguinte comando para iniciar o servidor `npm start`, duas mensgens são exibidas _"Servidor rodando na porta: 3000"_ e _"Banco de dados conectado!"_. O arquivo de configução para o banco de dados é o _database.js_, ele está na raiz do projeto, se precisar realizar alguma alteração, como exemplo trocar a porta de conexão com o banco basta apenas editá-lo, mas por padrão da instalação a porta é _27017_. 
 
 ## Testando a API
 
