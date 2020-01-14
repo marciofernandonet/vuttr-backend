@@ -16,4 +16,4 @@ const VuttrSchema = new mongoose.Schema({
     tags: [String]
 });
 
-module.exports = mongoose.model('Vuttr', VuttrSchema);
+module.exports = mongoose.model('Vuttr', VuttrSchema, 'vuttr');
