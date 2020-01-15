@@ -4,7 +4,7 @@ API para a aplicação VUTTR (Very Useful Tools to Remember). Um simples reposit
 
 ## Instalação
 
-1. Faça o clone deste projeto com `git clone https://github.com/marciofernandonet/vuttr.git`
+1. Faça o clone deste projeto com `git clone https://github.com/marciofernandonet/vuttr-backend.git`
 2. Entre na pasta do projeto e instale as dependências com `npm install`
 
 ## Criando o banco de dados
@@ -12,7 +12,7 @@ API para a aplicação VUTTR (Very Useful Tools to Remember). Um simples reposit
 1. O banco de dados para a aplicação é o [MongoDB](https://www.mongodb.com/), para inicializá-lo é preciso executar o comando `mongod` em um terminal separado.
 2. Em outro terminal execute o seguinte comando `mongo` para usar o MongoDB.
 3. Para criar um banco de dados basta utilizar o comando `use vuttr_db`, na aplicação o nome do banco é _vuttr_db_.
-4. No MongoDB você não precisa criar a _coleção_, pois o mesmo cria a coleção automaticamente quando você insere algum _documento_, basta apenas executar o seguinte comando `db.vuttr.insert({"title": "json-server", "link": "https://github.com/typicode/json-server","description": "Fake REST API...","tags":["api", "json","schema"]})`
+4. No MongoDB você não precisa criar a _coleção_, pois o mesmo cria a coleção dinamicamente quando você insere algum _documento_, basta apenas executar o seguinte comando `db.vuttr.insert({"title": "json-server", "link": "https://github.com/typicode/json-server","description": "Fake REST API...","tags":["api", "json","schema"]})`
 
 ## Rodando a API
 
